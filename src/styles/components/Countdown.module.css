@@ -17,15 +17,10 @@
     display: flex;
     flex: 1;
     align-items: center;
-    justify-content: space-evenly;
-
-   
-    
+    justify-content: space-evenly;  
 }
 .countdownContainer > div span{
   flex:1
-    
-   
 }
 .countdownContainer > div span:first-child{
     border-right: 1px solid #f0f1f3; 
@@ -60,15 +55,30 @@
         transition:background-color 0.5s ;
 
 }
-.countdownButton:hover{
+.countdownButton:disabled{
+    background: var(--gray-line);
+    color: var(--text);
+    cursor: not-allowed;
+}
+
+.countdownButton:not(:disabled):hover{
     background: var(--blue-dark);
 }
-.countdownButton.active{
-   
-    background: var(--red);
+.countdownButtonActive{
+   background: var(--red);
 }
-.countdownButton i{
+.countdownButtonActive:hover{
+    background: var(--red-dark);
+ }
 
-    font-size: 2rem;
-
+.countdownButton img{
+    width: 2.5rem;
+    height: 2.5rem;
 }
+.countdownButton:not(:disabled) img{
+    filter: opacity(90%) invert(100%);
+}
+.countdownButton:disabled img{
+    filter: invert(100%) brightness(0.4);
+}
+

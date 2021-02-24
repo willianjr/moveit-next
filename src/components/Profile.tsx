@@ -8,7 +8,7 @@ export function Profile()
             <div>
                 <strong>Willian Jr</strong>
                 <p>
-                    <i>!</i>
+                    <img src="icons/level.svg" alt=""/>
                     Level 1
                 </p>
             </div>
